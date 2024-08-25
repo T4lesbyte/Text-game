@@ -37,6 +37,7 @@ do {
         printf ("\n");
         comeco();
         a = 0;
+        recomeco = 0;
     break;
 
     case 2:
