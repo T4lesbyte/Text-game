@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <conio.h>
 #include <locale.h>
+#include <stdbool.h>
 
 
 char nome[40] ;
-int primeiro, b, c, d, e, recomeco, ife = 0;
+int primeiro, seg, ter, quar, quinto, recomeco;
+bool a; // começa como false
+
 
 
 
@@ -18,7 +21,7 @@ printf ("Me conte seu nome, aventureiro \n");
 
 comeco();
 
-if(ife == 1) {
+if(a == true ) {
 
 
 
@@ -33,7 +36,7 @@ do {
     case 1:
         printf ("\n");
         comeco();
-        ife = 0;
+        a = 0;
     break;
 
     case 2:
@@ -64,12 +67,12 @@ switch (primeiro) {
 
 case 1:
     printf ("Você agarra o fêmur de um esqueleto qualquer, parece que pode servir como uma boa arma \n");
-    ife = 0;
+    a = false; // 0
 break;
 
 case 2:
     printf ("broxa \n");
-    ife = 1;
+    a = true; // 1
 break;
 
 
