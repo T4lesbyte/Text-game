@@ -17,6 +17,11 @@ main() {
     printf ("Seja bem-vindo, %s \n",nome);
 
     comeco();
+    morreu();
+
+} // MAIN
+
+int morreu(){
 
     if(a == true ) {
 
@@ -45,11 +50,12 @@ main() {
 
     } // IF
 
-} // MAIN
+} // MORREU
 
 int comeco() {
 
     //------------
+    //a = false;
 
     printf ("Você acorda no chão de uma caverna fria \n");
     printf ("Ao seu redor é possível ver alguns esqueletos, uma tocha com uma brasa ainda brilhante, e uma pedra achatada \n");
@@ -65,13 +71,9 @@ int comeco() {
         case 2:
             printf ("broxa \n");
             a = true; // 1
+            morreu();
         break;
 
     } // SWITCH
 
 } // INT COMECO
-
-
-
-
-
