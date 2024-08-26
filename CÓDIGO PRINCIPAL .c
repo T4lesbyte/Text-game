@@ -8,50 +8,42 @@ char nome[40] ;
 int primeiro, seg, ter, quar, quinto, recomeco;
 bool a; // começa como false
 
-
-
-
 main() {
 
-setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "");
 
-printf ("Me conte seu nome, aventureiro \n");
+    printf ("Me conte seu nome, aventureiro \n");
     gets (nome);
     printf ("Seja bem-vindo, %s \n",nome);
 
-comeco();
+    comeco();
 
-if(a == true ) {
+    if(a == true ) {
 
+        do {
 
+            printf ("Você morreu! \n");
+            printf ("Deseja tentar novamente? \n");
+            printf ("(1)SIM   (2)NÃO \n");
+            scanf ("%i", &recomeco);
 
-do {
+            switch(recomeco){
+                case 1:
+                    printf ("\n");
+                    comeco();
+                    a = 0;
+                    recomeco = 0;
+                break;
 
-    printf ("Você morreu! \n");
-    printf ("Deseja tentar novamente? \n");
-    printf ("(1)SIM   (2)NÃO \n");
-    scanf ("%i", &recomeco);
+                case 2:
+                    printf ("Covarde \n");
+                    recomeco = 0;
+                break;
+            } //SWITCH
+        } // DO
+        while(recomeco == 1);
 
-        switch(recomeco){
-    case 1:
-        printf ("\n");
-        comeco();
-        a = 0;
-        recomeco = 0;
-    break;
-
-    case 2:
-        printf ("Covarde \n");
-        recomeco = 0;
-    break;
-    } //SWITCH
-} // DO
-while(recomeco == 1);
-
-
-
-
-} // IF
+    } // IF
 
 } // MAIN
 
@@ -64,25 +56,18 @@ int comeco() {
     printf ("Qual deles deseja pegar? (1)Osso (2)Tocha (3)Pedra \n");
     scanf ("%i", &primeiro);
 
-switch (primeiro) {
+    switch (primeiro) {
+        case 1:
+            printf ("Você agarra o fêmur de um esqueleto qualquer, parece que pode servir como uma boa arma \n");
+            a = false; // 0
+        break;
 
-case 1:
-    printf ("Você agarra o fêmur de um esqueleto qualquer, parece que pode servir como uma boa arma \n");
-    a = false; // 0
-break;
+        case 2:
+            printf ("broxa \n");
+            a = true; // 1
+        break;
 
-case 2:
-    printf ("broxa \n");
-    a = true; // 1
-break;
-
-
-
-
-
-} // SWITCH
-
-
+    } // SWITCH
 
 } // INT COMECO
 
