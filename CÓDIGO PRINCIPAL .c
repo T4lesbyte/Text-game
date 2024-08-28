@@ -17,7 +17,6 @@ main() {
     printf ("Seja bem-vindo, %s \n",nome);
 
     comeco();
-    morreu();
 
 } // MAIN
 
