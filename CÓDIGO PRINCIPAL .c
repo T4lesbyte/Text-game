@@ -14,7 +14,7 @@ main() {
 
     printf ("Me conte seu nome, aventureiro \n");
     gets (nome);
-    printf ("Seja bem-vindo, %s \n",nome);
+    printf ("\n Seja bem-vindo, %s \n \n",nome);
 
     comeco();
 
@@ -52,23 +52,40 @@ int comeco() {
     //------------
     //a = false;
 
-    printf ("Você acorda no chão de uma caverna fria \n");
-    printf ("Ao seu redor é possível ver alguns esqueletos, uma tocha com uma brasa ainda brilhante, e uma pedra achatada \n");
-    printf ("Qual deles deseja pegar? (1)Osso (2)Tocha (3)Pedra \n");
+    printf ("Você acorda no chão de uma masmorra fria \n");
+    printf ("Ao seu redor é possível ver uma adaga enferrujada, uma tocha com uma brasa ainda brilhante, e um molho de chaves \n");
+    printf ("Qual deles deseja pegar? (1)Adaga enferrujada (2)Tocha (3)Chaves \n");
     scanf ("%i", &primeiro);
 
     switch (primeiro) {
         case 1:
-            printf ("Você agarra o fêmur de um esqueleto qualquer, parece que pode servir como uma boa arma \n");
+            printf ("Você pega a adaga, parece que uma parte da lâmina ainda manteve seu fio. \n");
             a = false; // 0
         break;
 
         case 2:
-            printf ("broxa \n");
-            a = true; // 1
-            morreu();
+            printf ("Você pega a tocha, o calor remanescente naquela brasa esquenta seu rosto. \n");
+            a = false; // 1
         break;
 
+        case 3:
+            printf ("Você pega as chaves no chão, todas são iguais. \n");
+            a = false;
+        break;
     } // SWITCH
+    printf ("\nA sua frente existe uma porta aberta");
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+} // INT COMECO
 
-} // INT COMECO ww
+
+
+
