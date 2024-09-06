@@ -5,7 +5,7 @@
 
 
 char nome[40] ;
-int primeiro, seg, ter, quar, quinto, recomeco;
+int primeiro, seg, ter, quar, quinto, recomeco, opva;
 bool a; // começa como false
 
 main() {
@@ -57,35 +57,39 @@ int comeco() {
     printf ("Qual deles deseja pegar? (1)Adaga enferrujada (2)Tocha (3)Chaves \n");
     scanf ("%i", &primeiro);
 
-    switch (primeiro) {
-        case 1:
-            printf ("Você pega a adaga, parece que uma parte da lâmina ainda manteve seu fio. \n");
-            a = false; // 0
-        break;
+do {
+ int opva = 0;
+        switch (primeiro) {
+            case 1:
+                printf ("Você pega a adaga, parece que uma parte da lâmina ainda manteve seu fio. \n");
+                a = false; // 0
+                opva = 1;
+            break;
 
-        case 2:
-            printf ("Você pega a tocha, o calor remanescente naquela brasa esquenta seu rosto. \n");
-            a = false; // 1
-        break;
+            case 2:
+                printf ("Você pega a tocha, o calor remanescente naquela brasa esquenta seu rosto. \n");
+                a = false; // 1
+                opva = 1;
+            break;
 
-        case 3:
-            printf ("Você pega as chaves no chão, todas são iguais. \n");
-            a = false;
-        break;
-    } // SWITCH
-    printf ("\nA sua frente existe uma porta aberta");
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+            case 3:
+                printf ("Você pega as chaves no chão, todas são iguais. \n");
+                a = false;
+                opva = 1;
+            break;
+
+            default:
+                printf("Não é uma resposta válida.");
+            break;
+        } // SWITCH
+} // DO
+while (!opva);
+    printf ("\n A sua frente existe uma porta aberta");
+    printf ("\n Deseja passar por ela? (1)SIM (2)NÃO");
+    scanf ("%i",seg);
+
+
+
+
+
 } // INT COMECO
-
-
-
-
